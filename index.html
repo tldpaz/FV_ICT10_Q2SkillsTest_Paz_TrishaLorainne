@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Declares the document type and HTML version -->
+<html lang="en">
+<head>
+    <!-- Sets the character encoding to UTF-8 -->
+    <meta charset="UTF-8">
+
+    <!-- Title of the webpage -->
+    <title>School Club Information</title>
+
+    <!-- Bootstrap CSS for responsive layout and styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Internal CSS for additional styling -->
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fce7f3, #e0f2fe);
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .card {
+            border-radius: 18px;
+            background-color: #ffffff;
+        }
+
+        h3 {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        select {
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background-color: #ec4899;
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background-color: #db2777;
+        }
+
+        #clubInfo {
+            background-color: #f9fafb;
+            border-radius: 12px;
+            padding: 15px;
+        }
+
+        #clubInfo h5 {
+            color: #ec4899;
+            font-weight: 600;
+        }
+
+        #clubInfo p {
+            margin-bottom: 6px;
+            color: #374151;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center">
+        <div class="card shadow p-4 mt-5 col-md-6">
+            <h3 class="text-center mb-4">School Club Information</h3>
+
+            <!-- Dropdown menu for selecting a school club -->
+            <select id="clubSelect" class="form-select mb-3">
+                <!-- Default disabled option -->
+                <option selected disabled>Select a club</option>
+
+                <!-- Club options -->
+                <option value="Marching Band">Marching Band</option>
+                <option value="Glee Club">Glee Club</option>
+                <option value="Dance Club">Dance Club</option>
+                <option value="Math Club">Math Club</option>
+                <option value="Science Club">Science Club</option>
+                <option value="Communications Arts Club">Communications Arts Club</option>
+                <option value="COCC">COCC</option>
+                <option value="Social Science Club">Social Science Club</option>
+                <option value="Volleyball Varsity">Volleyball Varsity</option>
+                <option value="Basketball Varsity">Basketball Varsity</option>
+            </select>
+
+            <!-- Button that triggers the JavaScript function -->
+            <button class="btn btn-primary" onclick="showClubInfo()">
+                Show Club Information
+            </button>
+
+            <!-- Section where the selected club's information will be displayed -->
+            <div id="clubInfo" class="mt-4"></div>
+        </div>
+    </div>
+
+    <!-- Links the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
